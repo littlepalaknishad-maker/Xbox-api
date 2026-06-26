@@ -1,5 +1,3 @@
-# Create nixpacks.toml instead of Dockerfile
-cat > nixpacks.toml << 'EOF'
 [phases.setup]
 nixPkgs = ["python311"]
 
@@ -11,7 +9,3 @@ cmd = "python xbox_c2_api.py"
 
 [deploy]
 startCommand = "python xbox_c2_api.py"
-EOF
-
-# Deploy
-railway up
